@@ -13,7 +13,7 @@ body {
 }
 
 img {
-  vertical-align: middle; /* 移除圖片空隙 */
+  vertical-align: middle; /* 移除圖片空隙 (emmet:vam) */
   width: 100%;
 }
 

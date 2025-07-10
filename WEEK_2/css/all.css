@@ -1,0 +1,264 @@
+/* 盒模型 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 顏色 */
+:root {
+  --primary-100: #f5fee7;
+  --primary-200: #e8fec5;
+  --primary-300: #c0fa73;
+  --primary-400: #57a203;
+  --primary-500: #477a11;
+  --Neutral-0: #ffffff;
+  --Neutral-100: #f8f9fa;
+  --Neutral-200: #e9ecef;
+  --Neutral-300: #dee2e6;
+  --Neutral-400: #ced4da;
+  --Neutral-500: #adb5bd;
+  --Neutral-600: #6c757d;
+  --Neutral-700: #495057;
+  --Neutral-800: #343a40;
+  --Neutral-900: #212529;
+  --Functional-300: #d74f4f;
+}
+
+/* 基本樣式 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: var(--Neutral-900);
+}
+
+img {
+  vertical-align: middle; /* 移除圖片空隙 (emmet:vam) */
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Neutral-900);
+}
+
+/* 通用樣式 */
+.container {
+  width: 1296px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.col-1 {
+  width: calc(100% / 12); /* 計算每一欄(共12欄) */
+  padding-left: 12px; /* Gutter 24px / 2 */
+  padding-right: 12px;
+}
+
+.col-2 {
+  width: calc(100% / 12 * 2);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-3 {
+  width: calc(100% / 12 * 3);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-4 {
+  width: calc(100% / 12 * 4);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-5 {
+  width: calc(100% / 12 * 5);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-6 {
+  width: calc(100% / 12 * 6);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-7 {
+  width: calc(100% / 12 * 7);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-8 {
+  width: calc(100% / 12 * 8);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-9 {
+  width: calc(100% / 12 * 9);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-10 {
+  width: calc(100% / 12 * 10);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-11 {
+  width: calc(100% / 12 * 11);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-12 {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.g-8 {
+  gap: 8px;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mr-48 {
+  margin-right: 48px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.my-64 {
+  margin: 64px 0px;
+}
+
+.py-16 {
+  padding: 16px 0px;
+}
+
+.py-12 {
+  padding: 12px 0px;
+}
+
+.py-32 {
+  padding: 32px 0px;
+}
+
+/* 麵包穴導覽樣式設定 */
+.breadcrumb-item-link::after {
+  content: " / ";
+  font-weight: 700;
+  margin: 0px 12px;
+  color: var(--Neutral-300);
+}
+
+.breadcrumb-item-link {
+  color: var(--Neutral-600);
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer; /* 游標調整成手指樣式 */
+  border: none; /* 移除外框線 */
+  background-color: transparent; /* 背景透明 */
+}
