@@ -1,0 +1,653 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 盒模型 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 通用樣式 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: var(--Neutral-900);
+}
+
+img {
+  vertical-align: middle; /* 移除圖片空隙 (emmet:vam) */
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Neutral-900);
+}
+
+/* 導覽列--nav */
+.login {
+  margin-left: auto;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.col-1 {
+  width: calc(100% / 12); /* 計算每一欄(共12欄) */
+  padding-left: 12px; /* Gutter 24px / 2 */
+  padding-right: 12px;
+}
+
+.col-2 {
+  width: calc(100% / 12 * 2);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-3 {
+  width: calc(100% / 12 * 3);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-4 {
+  width: calc(100% / 12 * 4);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-5 {
+  width: calc(100% / 12 * 5);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-6 {
+  width: calc(100% / 12 * 6);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-7 {
+  width: calc(100% / 12 * 7);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-8 {
+  width: calc(100% / 12 * 8);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-9 {
+  width: calc(100% / 12 * 9);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-10 {
+  width: calc(100% / 12 * 10);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-11 {
+  width: calc(100% / 12 * 11);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-12 {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (max-width: 767px) {
+  .row {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .col-md-1 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(100% / 4);
+  }
+  .col-md-2 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(100% / 4 * 2);
+  }
+  .col-md-3 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(100% / 4 * 3);
+  }
+  .col-md-4 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 100%;
+  }
+}
+
+/* 顏色 */
+:root {
+  --primary-100: #f5fee7;
+  --primary-200: #e8fec5;
+  --primary-300: #c0fa73;
+  --primary-400: #57a203;
+  --primary-500: #477a11;
+  --Neutral-0: #ffffff;
+  --Neutral-100: #f8f9fa;
+  --Neutral-200: #e9ecef;
+  --Neutral-300: #dee2e6;
+  --Neutral-400: #ced4da;
+  --Neutral-500: #adb5bd;
+  --Neutral-600: #6c757d;
+  --Neutral-700: #495057;
+  --Neutral-800: #343a40;
+  --Neutral-900: #212529;
+  --Functional-300: #d74f4f;
+}
+
+.text-primary {
+  color: var(--Neutral-900);
+}
+
+.text-secondary {
+  color: var(--Neutral-600);
+}
+
+.text-muted {
+  color: var(--Neutral-500);
+}
+
+.text-hightlight {
+  color: var(--primary-400);
+}
+
+.text-on-dark {
+  color: var(--Neutral-0);
+}
+
+/* 字型 */
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.text-label-lg {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.text-label-md {
+  font-weight: 500;
+}
+
+.text-label-sm {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.text-label-xs {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .h3-md {
+    font-size: 28px;
+  }
+  .h4-md {
+    font-size: 24px;
+  }
+  .h5-md {
+    font-size: 20px;
+  }
+  .h6-md {
+    font-size: 16px;
+  }
+  .label-md-sm {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 576px) {
+  .h3-sm {
+    font-size: 28px;
+  }
+  .h4-sm {
+    font-size: 24px;
+  }
+  .h5-sm {
+    font-size: 20px;
+  }
+  .h6-sm {
+    font-size: 16px;
+  }
+  .label-md-sm {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+/* flex */
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .d-md-block {
+    display: block;
+  }
+  .d-md-none {
+    display: none;
+  }
+}
+
+@media (max-width: 567px) {
+  .d-sm-block {
+    display: block;
+  }
+  .d-sm-none {
+    display: none;
+  }
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.g-8 {
+  gap: 8px;
+}
+
+/* margin、padding */
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.mr-48 {
+  margin-right: 48px;
+}
+
+.my-64 {
+  margin-bottom: 64px;
+  margin-top: 64px;
+}
+
+@media (max-width: 767px) {
+  .me-md-0 {
+    margin-right: 0;
+  }
+  .my-md-0 {
+    margin: 0px;
+  }
+  .mb-md-12 {
+    margin-bottom: 12px;
+  }
+  .mb-md-16 {
+    margin-bottom: 16px;
+  }
+  .mb-md-24 {
+    margin-bottom: 24px;
+  }
+  .mb-md-32 {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 567px) {
+  .me-sm-0 {
+    margin-right: 0;
+  }
+  .me-sm-16 {
+    margin-right: 16px;
+  }
+  .mb-sm-4 {
+    margin-bottom: 4px;
+  }
+  .mb-sm-8 {
+    margin-bottom: 8px;
+  }
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-12 {
+  padding-bottom: 12px;
+}
+
+.py-12 {
+  padding: 12px 0px;
+}
+
+.py-16 {
+  padding: 16px 0px;
+}
+
+.py-32 {
+  padding: 32px 0px;
+}
+
+.py-64 {
+  padding: 64px 0px;
+}
+
+.py-120 {
+  padding: 120px 0px;
+}
+
+@media (max-width: 767px) {
+  .p-md-0 {
+    padding: 0px;
+  }
+  .py-md-16 {
+    padding: 16px 0px;
+  }
+  .p-md-24 {
+    padding: 24px;
+  }
+  .py-md-32 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .pb-md-12 {
+    padding-bottom: 12px;
+  }
+  .pb-md-32 {
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .py-sm-16 {
+    padding: 16px 0px;
+  }
+  .px-sm-12 {
+    padding: 0px 12px;
+  }
+  .py-sm-12 {
+    padding: 12px 0px;
+  }
+  .py-sm-32 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.bd-1 {
+  border-bottom: 1px solid rgba(222, 226, 230, 1);
+}
+
+/* 麵包穴導覽樣式設定 */
+.breadcrumb-item-link::after {
+  content: " / ";
+  font-weight: 700;
+  margin: 0px 12px;
+  color: var(--Neutral-300);
+}
+
+.breadcrumb-item-link {
+  color: var(--Neutral-600);
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer; /* 游標調整成手指樣式 */
+  border: none; /* 移除外框線 */
+  background-color: transparent; /* 背景透明 */
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 8px 16px;
+  }
+}

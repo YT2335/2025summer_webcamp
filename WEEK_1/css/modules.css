@@ -1,0 +1,325 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 盒模型 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 通用樣式 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: var(--Neutral-900);
+}
+
+img {
+  vertical-align: middle; /* 移除圖片空隙 (emmet:vam) */
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Neutral-900);
+}
+
+/* 顏色 */
+:root {
+  --primary-100: #f5fee7;
+  --primary-200: #e8fec5;
+  --primary-300: #c0fa73;
+  --primary-400: #57a203;
+  --primary-500: #477a11;
+  --Neutral-0: #ffffff;
+  --Neutral-100: #f8f9fa;
+  --Neutral-200: #e9ecef;
+  --Neutral-300: #dee2e6;
+  --Neutral-400: #ced4da;
+  --Neutral-500: #adb5bd;
+  --Neutral-600: #6c757d;
+  --Neutral-700: #495057;
+  --Neutral-800: #343a40;
+  --Neutral-900: #212529;
+  --Functional-300: #d74f4f;
+}
+
+.text-primary {
+  color: var(--Neutral-900);
+}
+
+.text-secondary {
+  color: var(--Neutral-600);
+}
+
+.text-muted {
+  color: var(--Neutral-500);
+}
+
+.text-hightlight {
+  color: var(--primary-400);
+}
+
+.text-on-dark {
+  color: var(--Neutral-0);
+}
+
+/* 字型 */
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.text-label-lg {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.text-label-sm {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text-label-xs {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* flex */
+.d-flex {
+  display: flex;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+/* margin、padding */
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.mr-48 {
+  margin-right: 48px;
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-12 {
+  padding-bottom: 12px;
+}
+
+.py-16 {
+  padding: 16px 0px;
+}
+
+.py-32 {
+  padding: 32px 0px;
+}
+
+.bd-1 {
+  border-bottom: 1px solid rgba(222, 226, 230, 1);
+}
